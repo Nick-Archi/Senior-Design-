@@ -1,0 +1,94 @@
+Illness List:
+------------
+Anemia
+Asthma
+Cataracts
+Cold
+Cold Sore
+Crohn's Disorder
+Diabetes Type I
+Flu
+HIV
+Meningitis
+
+
+Symptom List
+------------
+
+General Body: 
+Body Ache
+Chills
+Congestion
+Coughing
+Dehydration
+Fatigue
+Fever
+Frequent Urination
+Hunger
+Increased Thirst
+Insomia
+Itchness
+Joint Pain
+Laziness
+Loss of Appetite
+Loss of Smell
+Malaise
+Muscle Pain
+Nausea
+Pale Skin
+Red Rashes
+Redness of Skin
+Shortness of breath
+Sleepiness
+Sneezing
+Sweating
+Vomiting
+Weight Loss
+
+
+
+Head: 
+Bad Night vision
+Blister
+Blurred Vision
+Burning Lips
+Confusion
+Coughing
+Dizziness
+Halos around lights
+Headace
+Neck Pain
+Rashes
+Red Nose
+Runny Nose
+Sore Lip
+Sore Throat
+Throat Irriation
+Tingling lips
+Ulcers
+Vision Loss
+Watery Eyes
+White tongue
+
+
+Arms:
+
+
+Torso: 
+Back Pain
+Bloating
+Chest Pain
+Flatulence
+Pneumonia
+Rapid Heartbeat
+Wheezing
+
+
+Lower Body: 
+Abdomen Pain
+Blood in Stool
+Diarrhea
+Groin Sore
+Leg Cramps
+Rectum Pain
+
