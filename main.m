@@ -1,4 +1,6 @@
 %% Diagnose Senior Design Project
+% Editors: 
+%   Nicholas Arcibong
 % listdlg function for menu option?
 
 clear
@@ -49,23 +51,23 @@ while(start == 1)
        switch select
            case 1
                disp(bodyAreas{select})
-               vec = DetermineUser(generalBody);
+               vec = DetermineUser(generalBody, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, 0);
            case 2 
                disp(bodyAreas{select})
-               vec = DetermineUser(head);
+               vec = DetermineUser(head, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, headOffset);               
            case 3
                disp(bodyAreas{select})
-               vec = DetermineUser(arms);
+               vec = DetermineUser(arms, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, armsOffset);                              
            case 4
                disp(bodyAreas{select})
-               vec = DetermineUser(torso);
+               vec = DetermineUser(torso, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, torsoOffset);                              
            case 5 
                disp(bodyAreas{select})
-               vec = DetermineUser(lowerBody);
+               vec = DetermineUser(lowerBody, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, lowerBodyOffset);                                             
        end
        
