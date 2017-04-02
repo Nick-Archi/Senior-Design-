@@ -32,16 +32,15 @@ userInput = zeros(1,length(symptoms));
 vec = [];
 
 % creation of menu
-start = 1;
+start = 2;
 
-while(start == 1)
+while(start == 2)
    [select, ok] = listdlg('PromptString', 'Select an area',...
        'SelectionMode', 'single',...
        'ListString',bodyAreas);
     
    if ok == 0
-       warning('Program Terminated')
-       start = 0;
+       start = menu('End selection of symptoms?','Yes','No');
    
        % determine which body category they selected
    else
@@ -73,4 +72,9 @@ while(start == 1)
        
    end
     
-end
+end % end of selection
+
+warning('Symptoms have been selected')
+
+% begin algorithm
+
