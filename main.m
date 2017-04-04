@@ -5,13 +5,16 @@
 
 clear
 clc
+close all
 
 % loading of data
+disp('Loading Data...')
 dataMatrix = xlsread('DataMatrix.xlsx');
 [num1,txt1,raw1] = xlsread('DataMatrixInformation.xlsx');
 [num2,txt2,responseVector] = xlsread('ResponseVector.xlsx');
 
 % extracting information 
+disp('Extracting information...')
 symptoms = txt1(1,2:end);
 generalBody = symptoms(:,1:28);
 head = symptoms(:,29:49);
@@ -40,32 +43,33 @@ while(start == 2)
        'ListString',bodyAreas);
     
    if ok == 0
+       % end the selection portion
        start = menu('End selection of symptoms?','Yes','No');
    
-       % determine which body category they selected
    else
+       % determine which body category they selected       
        % determine the symptoms to display and get back a response
        % **** still currently need to figure out how to change the correct
        % values....
        switch select
            case 1
-               disp(bodyAreas{select})
+               fprintf('%s selected...\n', bodyAreas{select})
                vec = DetermineUser(generalBody, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, 0);
            case 2 
-               disp(bodyAreas{select})
+               fprintf('%s selected...\n', bodyAreas{select})
                vec = DetermineUser(head, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, headOffset);               
            case 3
-               disp(bodyAreas{select})
+               fprintf('%s selected...\n', bodyAreas{select})
                vec = DetermineUser(arms, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, armsOffset);                              
            case 4
-               disp(bodyAreas{select})
+               fprintf('%s selected...\n', bodyAreas{select})
                vec = DetermineUser(torso, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, torsoOffset);                              
            case 5 
-               disp(bodyAreas{select})
+               fprintf('%s selected...\n', bodyAreas{select})
                vec = DetermineUser(lowerBody, bodyAreas{select});
                userInput = changeUserInput(userInput, vec, lowerBodyOffset);                                             
        end
@@ -76,5 +80,5 @@ end % end of selection
 
 warning('Symptoms have been selected')
 
-% begin algorithm
+%% begin algorithm
 
