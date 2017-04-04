@@ -20,10 +20,12 @@ sel = sel + offset;
 
 for value = 1:1:length(sel)
     
-    userInput(sel(value)) = inverter(userInput(sel(value)));
+    % grabs current value in userInput vector and switches it
+    userInput(sel(value)) = inverter(userInput(sel(value))); 
         
 end
 
+% update the values
 updated = userInput;
 
 end
