@@ -127,13 +127,22 @@ symptomPoints2 = sum(symptomPoints,2);
 
 % ploting of the points to detail them
 figure(1)
+disp('Plotting of illnesses -> red x')
 plot(symptomPoints2, ones(10,1), 'xr')
 
 % plotting of the userInput point
 userPoint = userInput .* multiplier(1,:);
 userPoint2 = sum(userPoint);
 hold on
+disp('Plotting of User Input -> blue x')
 plot(userPoint2, 1, 'xb')
+
+% determining of distance from each illness
+% the closest index that is to 0 means that the user point is close to that
+% illness
+distance = abs(symptomPoints2 - userPoint2);
+minDistance = find(min(distance) == distance);
+fprintf('The illness that is the closest is...%s\n',responseVector{minDistance})
 %%
 % %% Algorithm 3 ** Probably not going to work since each disease is unique...
 % % Description:
