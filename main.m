@@ -112,6 +112,29 @@ disp('End...')
 %   point is obtained by multiplying each illness with a Multiplier vector
 %   and summing the total of that vector to obtain a scalar. 
 
+% loading of multiplier vector
+[multiplier, txt3, raw3] = xlsread('Multiplier.xlsx');
+
+% creation of the 1D line and points
+[row, col] = size(dataMatrix);
+% make a quick repeat of the multiplier vector for matrix multiplication
+multiplier = repmat(multiplier,row,1);
+
+symptomPoints = dataMatrix .* multiplier;
+
+% sum the rows together to give each illness a single point
+symptomPoints2 = sum(symptomPoints,2);
+
+% ploting of the points to detail them
+figure(1)
+plot(symptomPoints2, ones(10,1), 'xr')
+
+% plotting of the userInput point
+userPoint = userInput .* multiplier(1,:);
+userPoint2 = sum(userPoint);
+hold on
+plot(userPoint2, 1, 'xb')
+%%
 % %% Algorithm 3 ** Probably not going to work since each disease is unique...
 % % Description:
 % %   DataMatrix is fed into a classification tree algorithm which then
